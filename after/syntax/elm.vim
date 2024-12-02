@@ -22,6 +22,12 @@ syntax match elmNiceOperator "|\@<=>" conceal cchar=
 syntax match elmNiceOperator "<\ze|" conceal cchar=◁
 syntax match elmNiceOperator "<\@<=|" conceal cchar= 
 
+syntax match elmNiceOperator "|\ze\." conceal cchar=║
+syntax match elmNiceOperator "|\@<=\." conceal cchar= 
+
+syntax match elmNiceOperator "|\ze=" conceal cchar=╠
+syntax match elmNiceOperator "|\@<==" conceal cchar=═
+
 hi link elmNiceOperator Operator
 hi! link Conceal Operator
 setlocal conceallevel=2

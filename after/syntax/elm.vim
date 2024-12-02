@@ -13,17 +13,14 @@ syntax match elmNiceOperator ">=" conceal cchar=≥
 syntax match elmNiceOperator "\:\:" conceal cchar=∷
 syntax match elmNiceOperator "++" conceal cchar=⧺
 
-syntax match elmArrowHead contained ">" conceal cchar= 
-syntax match elmArrowTail contained "-" conceal cchar=→
-syntax match elmNiceOperator "->" contains=elmArrowHead,elmArrowTail
+syntax match elmNiceOperator "-\ze>" conceal cchar=→
+syntax match elmNiceOperator "-\@<=>" conceal cchar= 
 
-syntax match elmPizzaLeftHead contained "<" conceal cchar=◁
-syntax match elmPizzaLeftTail contained "|" conceal cchar= 
-syntax match elmNiceOperator "<|" contains=elmPizzaLeftHead,elmPizzaLeftTail
+syntax match elmNiceOperator "|\ze>" conceal cchar=▷
+syntax match elmNiceOperator "|\@<=>" conceal cchar= 
 
-syntax match elmPizzaRightHead contained "|" conceal cchar=▷
-syntax match elmPizzaRightTail contained ">" conceal cchar= 
-syntax match elmNiceOperator "|>" contains=elmPizzaRightTail,elmPizzaRightHead
+syntax match elmNiceOperator "<\ze|" conceal cchar=◁
+syntax match elmNiceOperator "<\@<=|" conceal cchar= 
 
 hi link elmNiceOperator Operator
 hi! link Conceal Operator

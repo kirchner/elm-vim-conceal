@@ -14,7 +14,7 @@ syntax match elmNiceOperator "\:\:" conceal cchar=∷
 syntax match elmNiceOperator "++" conceal cchar=⧺
 syntax match elmNiceOperator "&&" conceal cchar=∧
 syntax match elmNiceOperator "||" conceal cchar=∨
-syntax match elmNiceOperator "[:space:]\zsnot\ze[:space:]" conceal cchar=¬
+syntax match elmNiceOperator "not" conceal cchar=¬
 
 syntax match elmNiceOperator "-\ze>" conceal cchar=→
 syntax match elmNiceOperator "-\@<=>" conceal cchar= 
